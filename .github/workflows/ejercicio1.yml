@@ -11,16 +11,19 @@ on:
       - 'hangman-front/**'
 
 jobs:
+# vamos a levantar un contenedor para realizar las pruebas con un ubuntu
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
       # 1. Clonar el repositorio
       - name: Checkout code
+      # traete el codigo de la rama
         uses: actions/checkout@v4
 
       # 2. Configurar el entorno de Node.js
       - name: Set up Node.js
+      # vamos a instalar node y nos traemos todo de node con el actions
         uses: actions/setup-node@v4
         with:
           node-version: '18' # O la versión que use tu proyecto

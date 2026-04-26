@@ -2,6 +2,8 @@ name: Frontend CI
 # Nombre del workflow
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
     branches: [ main ]
     # Condición 1: Solo se dispara si hay cambios en esta carpeta específica
